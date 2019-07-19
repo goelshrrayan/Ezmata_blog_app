@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".chat.users.MyChatActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/myChatToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_button_toolbar_chatbox"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_action_back" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/chatbox_toolbar_icon"
+                android:layout_width="45dp"
+                android:layout_height="52dp"
+                android:background="@drawable/ic_action_add"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/chatbox_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_vertical"
+                android:text="Text"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mychat_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/attachment_linear_layout"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_height="72dp">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_action_attachment"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="File Attached"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_margin="6dp"
+            android:id="@+id/remove_attachment"
+            android:text="REMOVE"
+            android:background="@drawable/new_button_style"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+android:layout_marginLeft="2dp"
+            android:layout_gravity="center"
+            android:layout_weight="9"
+            android:orientation="horizontal"
+            android:background="@drawable/new_button_style">
+
+            <EditText
+                android:id="@+id/mychat_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="9"
+                android:padding="10dp"
+                android:background="@drawable/button_style"
+                android:textColor="#000"
+                android:hint="Message"
+                android:textSize="16dp" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/attach_attachment"
+                android:src="@drawable/ic_action_attachment"
+                android:layout_gravity="center"/>
+
+
+
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="#FAFAFA"
+    android:layout_gravity="center_vertical"
+    android:layout_weight="1.75">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mychat_send_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+
+                android:background="@drawable/button_round_send"
+                android:padding="12dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_action_send_message" />
+
+</LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".videos.AddVideo">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/video_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ImageView
+        android:id="@+id/video_image"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:background="@android:color/darker_gray"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_toolbar"
+        app:srcCompat="@mipmap/action_add_photo"
+        tools:ignore="VectorDrawableCompat" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:id="@+id/video_url"
+        android:hint="add link to video"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:id="@+id/video_desc"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:id="@+id/upload_btn"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/new_button_style"/>
+
+</LinearLayout>
